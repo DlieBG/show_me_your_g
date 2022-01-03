@@ -1,1 +1,8 @@
 <p>Login/View Event/Create Event</p>
+<ng-container *ngIf="isLoggedIn(); else login">
+    
+</ng-container>
+
+<ng-template #login>
+    <app-login></app-login>
+</ng-template>

@@ -1,1 +1,10 @@
-<p>login</p>
+<mat-form-field class="input" required>
+    <mat-label>Username</mat-label>
+    <input matInput [(ngModel)]="username" required>
+</mat-form-field>
+<mat-form-field class="input" required>
+    <mat-label>Password</mat-label>
+    <input matInput [(ngModel)]="password" type="password" (keyup.enter)="login()" required>
+</mat-form-field>
+<button mat-raised-button color="primary" (click)="login()" [disabled]="isValid()" class="button">Login</button>
+<button mat-raised-button color="primary" (click)="register()" [disabled]="isValid() || registered" class="button">Register</button>
